@@ -1,7 +1,7 @@
 
 ## allccountjs
 
-2015-07-24 10:52PM -- 7/26 Ver 04
+2015-07-24 10:52PM -- 7/26 Ver 05
 
 Summary:
 This is a node.js mongodb based full stack javascript framework for creating web apps.
@@ -9,6 +9,9 @@ This is a node.js mongodb based full stack javascript framework for creating web
 
 Purpose: Install on Windows my 'redek' computer to test this out.
     
+
+See [https://github.com/dgleba/toptal-community-allcount](https://github.com/dgleba/toptal-community-allcount) for the code.
+
 ---
 
 [http://www.toptal.com/nodejs/rapid-application-development-with-allcountjs](http://www.toptal.com/nodejs/rapid-application-development-with-allcountjs)
