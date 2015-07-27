@@ -24,6 +24,7 @@ A.app({
         },
         referenceName: "eventName",
         sorting: [['date', -1], ['time', -1]],
+		customView: "events",
         actions: [{
           id: "apply",
           name: "Apply",
@@ -45,7 +46,15 @@ A.app({
               });
             })
           }
-        }]
+        },
+		{
+			id: "import-blog-events",
+			name: "Import Blog Events",
+			actionTarget: "all-items",
+			perform: function (DiscussionEventsImport, Actions) {
+				return DiscussionEventsImport.importEvents().then(function () { return Actions.refreshResult() });
+			}
+		}]
       },
       UserEvent: {
         fields: {

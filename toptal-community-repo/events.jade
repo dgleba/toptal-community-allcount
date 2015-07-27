@@ -1,0 +1,27 @@
+extends main
+include mixins
+
+block vars
+    - var hasToolbar = true
+block content
+    .refresh-form-controller(ng-app='allcount', ng-controller='EntityViewController')
+        +defaultToolbar()
+        .container.screen-container(ng-cloak)
+            +defaultList()
+                .row: .col-lg-4.col-md-6.col-xs-12(ng-repeat="item in items") 
+                    .panel.panel-default
+                        .panel-heading
+                            h3 {{item.date | date}} {{item.time}}
+                            div
+                                button.btn.btn-default.btn-xs(ng-if="!isInEditMode", lc-tooltip="View", ng-click="navigate(item.id)"): i.glyphicon.glyphicon-chevron-right
+                                | &nbsp;
+                                button.btn.btn-danger.btn-xs(ng-if="isInEditMode", lc-tooltip="Delete", ng-click="deleteEntity(item)"): i.glyphicon.glyphicon-trash
+                        .panel-body
+                            h3 {{item.eventName}}
+            +noEntries()
+            +defaultEditAndCreateForms()
+
+block js
+    +entityJs()
+    
+    
